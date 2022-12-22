@@ -23,6 +23,7 @@ const server = new ApolloServer({
 	},
 });
 
+//put server.listen into an async function and use await on server.listen so when deployed or running locally either machine knows how which port to use
 async function startApolloServer(server) {
 	await server.listen({ port: process.env.PORT || 4000 }).then(() => {
 		console.log(`
@@ -33,4 +34,5 @@ async function startApolloServer(server) {
 	});
 }
 
+//call the async function so will actually run at build time and port is available 
 startApolloServer(server);
