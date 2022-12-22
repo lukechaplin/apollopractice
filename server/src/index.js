@@ -32,3 +32,5 @@ async function startApolloServer(server) {
   `);
 	});
 }
+
+startApolloServer(server);
