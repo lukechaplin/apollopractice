@@ -11,7 +11,7 @@ first is url used to connect to sever, second is in memory cache -
 
 const client = new ApolloClient({
 	// options go here
-	uri: "http://localhost:4000",
+	uri: "https://apollopractice-production.up.railway.app/",
 	cache: new InMemoryCache(),
 });
 
