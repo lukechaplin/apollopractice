@@ -80,8 +80,10 @@ const resolvers = {
 		modules: ({ id }, _, { dataSources }) => {
 			return dataSources.trackAPI.getTrackModules(id);
 		},
+		//replacing length field in track used before (now deprecated)
 		durationInSeconds: ({ length }) => length,
 	},
+	//replacing length field in module used before (now deprecated)
 	Module: {
 		durationInSeconds: ({ length }) => length,
 	},
